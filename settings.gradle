@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        gradlePluginPortal()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        maven {
+            url "https://nexus.inductiveautomation.com/repository/public"
+        }
+    }
+}
+
+rootProject.name = "dio-zero"
+
+include(
+    ":",
+    ":common",
+    ":gateway",
+    ":designer",
+    ":client"
+)
