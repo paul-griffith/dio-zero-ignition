@@ -18,4 +18,4 @@ jobs:
           gpg --batch --passphrase "${{ secrets.GPG_PASSWORD }}" -d -o release.keystore release.keystore.asc
           echo "${{ secrets.CHAIN_GPG }}" > chain.p7b.asc
           gpg --batch --passphrase "${{ secrets.GPG_PASSWORD }}" -d -o chain.p7b release.keystore.asc
-          ./gradlew build -keystoreFile=release.keystore -keystorePassword="${{ secrets.KEYSTORE_PASSWORD }}" -certFile=chain.p7b -certPassword="${{ secrets.CERT_PASSWORD }}" -certAlias=ignition
+          ./gradlew build -PkeystoreFile=release.keystore -PkeystorePassword="${{ secrets.KEYSTORE_PASSWORD }}" -PcertFile=chain.p7b -PcertPassword="${{ secrets.CERT_PASSWORD }}" -PcertAlias=ignition
