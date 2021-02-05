@@ -91,5 +91,5 @@ ignitionModule {
      *
      */
      // Default convention value is applied automatically using value shown below.  Uncomment to set/override.
-     propertyFile = project.file("${System.getProperty("user.home")}/signing.properties")
+     propertyFile = project.file("${System.getProperty("user.home")}/gradle.properties")
 }
