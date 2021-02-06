@@ -90,5 +90,5 @@ ignitionModule {
      *```
      *
      */
-     propertyFile = project.file("gradle.properties")
+//     propertyFile = project.file("gradle.properties")
 }
